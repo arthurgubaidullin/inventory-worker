@@ -9,3 +9,7 @@ message CatalogItem {
   string id = 1;
   string name = 2;
 }
+
+message CatalogItemList {
+	repeated CatalogItem items = 1;
+}
