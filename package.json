@@ -4,6 +4,7 @@
 	"workspaces": [
 		"catalog/database/service",
 		"catalog/database/in-memory",
+		"catalog/http/contracts",
 		"worker"
 	],
 	"scripts": {

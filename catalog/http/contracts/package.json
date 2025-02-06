@@ -1,0 +1,10 @@
+{
+	"name": "@inventory-worker/catalog-http-contracts",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc -p tsconfig-build.json"
+	},
+	"private": true
+}
