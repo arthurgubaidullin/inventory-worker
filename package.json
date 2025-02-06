@@ -2,6 +2,7 @@
 	"name": "@inventory-worker/source",
 	"type": "module",
 	"workspaces": [
+		"catalog/database/service",
 		"worker"
 	],
 	"scripts": {
