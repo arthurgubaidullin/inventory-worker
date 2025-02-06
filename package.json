@@ -12,6 +12,8 @@
 		"format:check": "prettier . --check"
 	},
 	"devDependencies": {
+		"@bufbuild/buf": "^1.50.0",
+		"@bufbuild/protoc-gen-es": "^2.2.3",
 		"prettier": "^3.4.2",
 		"typescript": "^5.7.3"
 	},
