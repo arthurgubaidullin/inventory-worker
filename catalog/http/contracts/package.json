@@ -4,7 +4,14 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsc -p tsconfig-build.json"
+		"build": "npx buf generate && tsc -p tsconfig-build.json"
 	},
-	"private": true
+	"files": [
+		"./dist/**/*.js",
+		"./dist/**/*.d.ts"
+	],
+	"private": true,
+	"dependencies": {
+		"@bufbuild/protobuf": "^2.2.3"
+	}
 }
