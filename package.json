@@ -1,11 +1,16 @@
 {
-  "name": "@inventory-worker/source",
-  "type": "module",
-  "private": true,
-  "workspaces": [
-    "worker"
-  ],
-  "devDependencies": {
-    "typescript": "^5.7.3"
-  }
+	"name": "@inventory-worker/source",
+	"type": "module",
+	"workspaces": [
+		"worker"
+	],
+	"scripts": {
+		"format:write": "prettier . --write",
+		"format:check": "prettier . --check"
+	},
+	"devDependencies": {
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.3"
+	},
+	"private": true
 }
