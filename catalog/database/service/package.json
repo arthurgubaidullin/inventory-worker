@@ -1,5 +1,5 @@
 {
-	"name": "catalog-database-service",
+	"name": "@inventory-worker/catalog-database-service",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

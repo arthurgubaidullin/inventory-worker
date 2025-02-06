@@ -1,5 +1,5 @@
 {
-	"name": "in-memory-catalog-database-service",
+	"name": "@inventory-worker/in-memory-catalog-database-service",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
