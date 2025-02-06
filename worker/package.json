@@ -1,0 +1,17 @@
+{
+	"name": "worker",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"deploy": "wrangler deploy --dry-run",
+		"dev": "wrangler dev --ip 0.0.0.0",
+		"start": "wrangler dev --ip 0.0.0.0",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250204.0",
+		"typescript": "^5.5.2",
+		"wrangler": "^3.107.3"
+	}
+}
