@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message CreateCatalogItem {
+  string id = 1;
+  string name = 2;
+}
+
+message CatalogItem {
+  string id = 1;
+  string name = 2;
+}
