@@ -2,5 +2,8 @@
   "name": "@inventory-worker/source",
   "type": "module",
   "private": true,
-  "workspaces": []
+  "workspaces": [],
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
 }
