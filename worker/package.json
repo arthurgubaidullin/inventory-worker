@@ -9,6 +9,10 @@
 		"start": "wrangler dev --ip 0.0.0.0",
 		"cf-typegen": "wrangler types"
 	},
+	"dependencies": {
+		"@inventory-worker/catalog-database-service": "*",
+		"@inventory-worker/in-memory-catalog-database-service": "*"
+	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
 		"typescript": "^5.5.2",
