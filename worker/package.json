@@ -10,6 +10,7 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
+		"@bufbuild/protobuf": "^2.2.3",
 		"@inventory-worker/catalog-database-service": "*",
 		"@inventory-worker/in-memory-catalog-database-service": "*"
 	},
