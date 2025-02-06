@@ -1,5 +1,6 @@
 {
   "name": "@inventory-worker/source",
+  "type": "module",
   "private": true,
   "workspaces": []
 }
