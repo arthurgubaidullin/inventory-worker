@@ -37,7 +37,7 @@ export default {
 			const response: CatalogItemList = {
 				$typeName: "CatalogItemList",
 				items: items.map(
-					(item): CatalogItem => ({ $typeName: "CatalogItem", ...item }),
+					(item): CatalogItem => ({ ...item, $typeName: "CatalogItem" }),
 				),
 			};
 
