@@ -4,6 +4,7 @@
 	"workspaces": [
 		"catalog/database/service",
 		"catalog/service/types",
+		"catalog/service/factory",
 		"catalog/database/in-memory",
 		"catalog/http/contracts",
 		"worker"
