@@ -13,7 +13,8 @@
 	"dependencies": {
 		"@bufbuild/protobuf": "^2.2.3",
 		"@inventory-worker/catalog-http-contracts": "*",
-		"@inventory-worker/in-memory-services": "*"
+		"@inventory-worker/in-memory-services": "*",
+		"hono": "^4.7.0"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
