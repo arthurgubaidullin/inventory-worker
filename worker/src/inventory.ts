@@ -11,7 +11,7 @@ const { inventory } = InMemoryServices.get();
 
 const app = new Hono();
 
-app.post("/inventory/actions", async (c) => {
+app.post("/actions", async (c) => {
 	const action = fromJson(ActionSchema, await c.req.json());
 
 	if ((action.type = ActionType.RECEIVED_GOODS)) {
@@ -24,7 +24,7 @@ app.post("/inventory/actions", async (c) => {
 	c.status(202);
 });
 
-app.get("/inventory/:id", async (c) => {
+app.get("/:id", async (c) => {
 	const catalogId = c.req.param("id");
 
 	const item = await inventory.getCurrentStock(catalogId);
