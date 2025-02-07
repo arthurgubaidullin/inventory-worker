@@ -14,7 +14,11 @@ export const create = (): Services => {
 
 	const catalog = CatalogServiceFactory.create(catalogDatabase, logger);
 
-	const inventory = InventoryServiceFactory.create(inventoryDatabase, logger);
+	const inventory = InventoryServiceFactory.create(
+		inventoryDatabase,
+		catalog,
+		logger,
+	);
 
 	return {
 		catalog,
