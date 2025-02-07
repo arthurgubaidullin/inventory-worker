@@ -1,1 +1,17 @@
-export const lol = "pirojok";
+import { type CatalogService } from "@inventory-worker/catalog-service-types";
+import { type CatalogService as CatalogDatabase } from "@inventory-worker/catalog-database-service";
+
+export const create = (db: CatalogDatabase): CatalogService => {
+	return {
+		addCatalogItem: async (item) => {
+			await db.addItem(item);
+
+			return item;
+		},
+		getCatalogItems: async () => {
+			const items = await db.getItems();
+
+			return Array.from(items);
+		},
+	};
+};
