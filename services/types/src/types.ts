@@ -1,7 +1,12 @@
 import { type CatalogService } from "@inventory-worker/catalog-service-types";
+import { type LoggerService } from "@inventory-worker/logger-types";
 
 export interface Catalog {
 	readonly catalog: CatalogService;
 }
 
-export type Services = Catalog;
+export interface Logger {
+	readonly logger: LoggerService;
+}
+
+export type Services = Catalog & Logger;
