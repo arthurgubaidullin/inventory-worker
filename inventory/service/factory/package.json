@@ -1,0 +1,15 @@
+{
+	"name": "@inventory-worker/inventory-service-factory",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"dependencies": {
+		"@inventory-worker/inventory-service-types": "*",
+		"@inventory-worker/logger-types": "*"
+	},
+	"scripts": {
+		"prebuild": "rm -rf *.tsbuildinfo dist",
+		"build": "tsc -p tsconfig-build.json"
+	},
+	"private": true
+}
