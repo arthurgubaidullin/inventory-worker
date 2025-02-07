@@ -1,0 +1,14 @@
+{
+	"name": "@inventory-worker/services-types",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"dependencies": {
+		"@inventory-worker/catalog-service-types": "*"
+	},
+	"scripts": {
+		"prebuild": "rm -rf *.tsbuildinfo dist",
+		"build": "tsc -p tsconfig-build.json"
+	},
+	"private": true
+}
