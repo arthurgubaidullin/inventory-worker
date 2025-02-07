@@ -23,5 +23,6 @@
 		"turbo": "^2.4.0",
 		"typescript": "^5.7.3"
 	},
-	"private": true
+	"private": true,
+	"packageManager": "npm@10.9.0"
 }
