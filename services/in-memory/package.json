@@ -7,7 +7,9 @@
 		"@inventory-worker/services-types": "*",
 		"@inventory-worker/catalog-service-factory": "*",
 		"@inventory-worker/in-memory-catalog-database": "*",
-		"@inventory-worker/logger-factory": "*"
+		"@inventory-worker/inventory-service-factory": "*",
+		"@inventory-worker/logger-factory": "*",
+		"@inventory-worker/in-memory-inventory-database": "*"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",

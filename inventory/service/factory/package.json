@@ -5,7 +5,8 @@
 	"types": "dist/index.d.ts",
 	"dependencies": {
 		"@inventory-worker/inventory-service-types": "*",
-		"@inventory-worker/logger-types": "*"
+		"@inventory-worker/logger-types": "*",
+		"@inventory-worker/inventory-database-types": "*"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
