@@ -1,6 +1,6 @@
 export interface InventoryItem {
-	readonly id: string;
-	readonly name: string;
+	readonly catalogId: string;
+	readonly quantity: number;
 }
 
 export interface InventoryDatabase {

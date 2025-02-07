@@ -8,21 +8,21 @@ export const create = (): InventoryDatabase => {
 
 	return {
 		addItem: async (item) => {
-			if (db.has(item.id)) {
+			if (db.has(item.catalogId)) {
 				return;
 			}
 
-			db.set(item.id, item);
+			db.set(item.catalogId, item);
 		},
 		getItem: async (itemId) => {
 			return db.get(itemId) ?? null;
 		},
 		updateItem: async (item) => {
-			if (!db.has(item.id)) {
+			if (!db.has(item.catalogId)) {
 				return;
 			}
 
-			db.set(item.id, item);
+			db.set(item.catalogId, item);
 		},
 	};
 };
