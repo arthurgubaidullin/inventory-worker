@@ -1,18 +1,16 @@
-import { fromJson, toJsonString, create } from "@bufbuild/protobuf";
+import { create, fromJson, toJsonString } from "@bufbuild/protobuf";
 import {
-	CatalogItem,
 	CatalogItemList,
 	CatalogItemListSchema,
-	CatalogItemSchema,
 	CreateCatalogItem,
 	CreateCatalogItemSchema,
 } from "@inventory-worker/catalog-http-contracts";
-import { getInMemoryCatalogService } from "@inventory-worker/in-memory-catalog-database";
+import * as InMemoryServices from "@inventory-worker/in-memory-services";
+
+const { catalog } = InMemoryServices.get();
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		const db = getInMemoryCatalogService();
-
 		if (request.method === "POST") {
 			let createCatalogItem: CreateCatalogItem;
 			try {
@@ -27,7 +25,7 @@ export default {
 				});
 			}
 
-			await db.addItem(createCatalogItem);
+			await catalog.addCatalogItem(createCatalogItem);
 
 			const item = { id: createCatalogItem.id };
 
@@ -35,7 +33,7 @@ export default {
 				headers: { "Content-Type": "application/json" },
 			});
 		} else {
-			const items = await db.getItems();
+			const items = await catalog.getCatalogItems();
 
 			const response: CatalogItemList = create(CatalogItemListSchema, {
 				items: Array.from(items),

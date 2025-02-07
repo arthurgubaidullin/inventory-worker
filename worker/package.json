@@ -11,9 +11,8 @@
 	},
 	"dependencies": {
 		"@bufbuild/protobuf": "^2.2.3",
-		"@inventory-worker/catalog-database-types": "*",
-		"@inventory-worker/in-memory-catalog-database": "*",
-		"@inventory-worker/catalog-http-contracts": "*"
+		"@inventory-worker/catalog-http-contracts": "*",
+		"@inventory-worker/in-memory-services": "*"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
