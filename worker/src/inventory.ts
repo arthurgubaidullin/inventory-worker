@@ -1,48 +1,44 @@
-import { create, fromJsonString, toJsonString } from "@bufbuild/protobuf";
+import { create, fromJson, toJsonString } from "@bufbuild/protobuf";
 import * as InMemoryServices from "@inventory-worker/in-memory-services";
 import {
 	ActionSchema,
 	ActionType,
 	InventoryItemSchema,
 } from "@inventory-worker/inventory-http-contracts";
+import { Hono } from "hono";
 
 const { inventory } = InMemoryServices.get();
 
-export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		const path = new URL(request.url).pathname;
+const app = new Hono();
 
-		const prefix = "/inventory";
+app.post("/inventory/actions", async (c) => {
+	const action = fromJson(ActionSchema, await c.req.json());
 
-		const actions_prefix = `${prefix}/actions`;
+	if ((action.type = ActionType.RECEIVED_GOODS)) {
+		await inventory.receivedGoods(action);
+	}
+	if ((action.type = ActionType.SOLD_GOODS)) {
+		await inventory.soldGoods(action);
+	}
 
-		if (path.startsWith(actions_prefix) && request.method === "POST") {
-			const action = fromJsonString(ActionSchema, await request.json());
+	c.status(202);
+});
 
-			if ((action.type = ActionType.RECEIVED_GOODS)) {
-				await inventory.receivedGoods(action);
-			}
-			if ((action.type = ActionType.SOLD_GOODS)) {
-				await inventory.soldGoods(action);
-			}
+app.get("/inventory/:id", async (c) => {
+	const catalogId = c.req.param("id");
 
-			return new Response(null, { status: 202 });
-		}
+	const item = await inventory.getCurrentStock(catalogId);
 
-		if (path.startsWith(`${prefix}/`) && request.method === "GET") {
-			const catalogId = path.slice(`${prefix}/`.length);
+	if (!item) {
+		return new Response(null, { status: 410 });
+	}
 
-			const item = await inventory.getCurrentStock(catalogId);
+	const json = toJsonString(
+		InventoryItemSchema,
+		create(InventoryItemSchema, item),
+	);
 
-			if (!item) {
-				return new Response(null, { status: 410 });
-			}
+	c.json(json);
+});
 
-			return new Response(
-				toJsonString(InventoryItemSchema, create(InventoryItemSchema, item)),
-			);
-		}
-
-		return new Response(null, { status: 404 });
-	},
-} satisfies ExportedHandler<Env>;
+export default app;
