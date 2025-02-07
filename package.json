@@ -3,6 +3,7 @@
 	"type": "module",
 	"workspaces": [
 		"catalog/database/service",
+		"catalog/service/types",
 		"catalog/database/in-memory",
 		"catalog/http/contracts",
 		"worker"
