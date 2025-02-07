@@ -6,11 +6,16 @@ import {
 	CreateCatalogItemSchema,
 } from "@inventory-worker/catalog-http-contracts";
 import * as InMemoryServices from "@inventory-worker/in-memory-services";
+import InventoryWorker from "./inventory";
 
 const { catalog } = InMemoryServices.get();
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		if (new URL(request.url).pathname.startsWith("/inventory")) {
+			return await InventoryWorker.fetch(request, env, ctx);
+		}
+
 		if (request.method === "POST") {
 			let createCatalogItem: CreateCatalogItem;
 			try {
