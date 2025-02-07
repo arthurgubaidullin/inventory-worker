@@ -14,4 +14,4 @@ export interface Warning {
 	readonly warn: (data: Readonly<Record<string, unknown>>) => void;
 }
 
-export type Logger = Log & Info & Error & Warning;
+export type LoggerService = Log & Info & Error & Warning;

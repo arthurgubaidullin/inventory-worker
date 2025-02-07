@@ -1,6 +1,6 @@
-import { type Logger } from "@inventory-worker/logger-types";
+import { type LoggerService } from "@inventory-worker/logger-types";
 
-export const get = (): Logger => ({
+export const get = (): LoggerService => ({
 	error: (data) => {
 		console.error(data);
 	},
