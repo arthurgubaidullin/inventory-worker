@@ -11,4 +11,8 @@ export interface GetCatalogItems {
 	readonly getCatalogItems: () => Promise<CatalogItem[]>;
 }
 
-export type CatalogService = AddCatalogItem & GetCatalogItems;
+export interface GetCatalogItem {
+	readonly getItem: (id: string) => Promise<CatalogItem | null>;
+}
+
+export type CatalogService = AddCatalogItem & GetCatalogItem & GetCatalogItems;

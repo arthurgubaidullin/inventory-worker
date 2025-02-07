@@ -14,6 +14,9 @@ export const create = (): CatalogDatabase => {
 
 			db.set(item.id, item);
 		},
+		getItem: async (id) => {
+			return db.get(id) ?? null;
+		},
 		getItems: async () => {
 			return Array.from(db.values());
 		},

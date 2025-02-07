@@ -14,6 +14,9 @@ export const create = (
 
 			return item;
 		},
+		getItem: async (id) => {
+			return await db.getItem(id);
+		},
 		getCatalogItems: async () => {
 			const items = await db.getItems();
 
