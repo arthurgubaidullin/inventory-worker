@@ -7,6 +7,8 @@
 		"catalog/service/factory",
 		"catalog/database/in-memory",
 		"catalog/http/contracts",
+		"logger/types",
+		"logger/factory",
 		"services/types",
 		"services/in-memory",
 		"worker"
