@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+enum ActionType {
+  RECEIVED_GOODS = 0;
+  SOLD_GOODS = 1;
+}
+
+message Action {
+	ActionType type = 1;
+  string catalog_id = 2;
+  int64 quantity = 3;
+}
+
+message InventoryItem {
+  string catalog_id = 1;
+  int64 quantity = 2;
+}
+

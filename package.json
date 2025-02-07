@@ -7,6 +7,7 @@
 		"catalog/service/types",
 		"catalog/service/factory",
 		"catalog/http/contracts",
+		"inventory/http/contracts",
 		"inventory/service/types",
 		"inventory/service/factory",
 		"inventory/database/types",
