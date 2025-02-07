@@ -7,7 +7,8 @@
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev --ip 0.0.0.0",
 		"start": "wrangler dev --ip 0.0.0.0",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"build": "wrangler deploy --dry-run --outdir=dist"
 	},
 	"dependencies": {
 		"@bufbuild/protobuf": "^2.2.3",
