@@ -3,7 +3,7 @@ export interface CatalogItem {
 	readonly name: string;
 }
 
-export interface CatalogService {
+export interface CatalogDatabase {
 	readonly addItem: (item: CatalogItem) => Promise<void>;
 	readonly getItems: () => Promise<ReadonlyArray<CatalogItem>>;
 }

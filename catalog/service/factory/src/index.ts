@@ -1,5 +1,5 @@
 import { type CatalogService } from "@inventory-worker/catalog-service-types";
-import { type CatalogService as CatalogDatabase } from "@inventory-worker/catalog-database-service";
+import { type CatalogDatabase } from "@inventory-worker/catalog-database-service";
 
 export const create = (db: CatalogDatabase): CatalogService => {
 	return {
