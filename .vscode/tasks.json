@@ -3,9 +3,9 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"command": ["npm", "run", "build", "--workspaces", "--if-present"],
+			"command": ["turbo", "build"],
 			"problemMatcher": ["$tsc"],
-			"label": "npm: build",
+			"label": "turbo: build",
 			"group": {
 				"kind": "build",
 				"isDefault": true
