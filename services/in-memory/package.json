@@ -6,7 +6,8 @@
 	"dependencies": {
 		"@inventory-worker/services-types": "*",
 		"@inventory-worker/catalog-service-factory": "*",
-		"@inventory-worker/in-memory-catalog-database": "*"
+		"@inventory-worker/in-memory-catalog-database": "*",
+		"@inventory-worker/logger-factory": "*"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
