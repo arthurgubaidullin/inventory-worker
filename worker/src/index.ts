@@ -1,8 +1,9 @@
-import { fromJson, toJsonString } from "@bufbuild/protobuf";
+import { fromJson, toJsonString, create } from "@bufbuild/protobuf";
 import {
 	CatalogItem,
 	CatalogItemList,
 	CatalogItemListSchema,
+	CatalogItemSchema,
 	CreateCatalogItem,
 	CreateCatalogItemSchema,
 } from "@inventory-worker/catalog-http-contracts";
@@ -28,18 +29,17 @@ export default {
 
 			await db.addItem(createCatalogItem);
 
-			return new Response(JSON.stringify({ id: createCatalogItem.id }), {
+			const item = { id: createCatalogItem.id };
+
+			return new Response(JSON.stringify(item), {
 				headers: { "Content-Type": "application/json" },
 			});
 		} else {
 			const items = await db.getItems();
 
-			const response: CatalogItemList = {
-				$typeName: "CatalogItemList",
-				items: items.map(
-					(item): CatalogItem => ({ ...item, $typeName: "CatalogItem" }),
-				),
-			};
+			const response: CatalogItemList = create(CatalogItemListSchema, {
+				items: Array.from(items),
+			});
 
 			return new Response(toJsonString(CatalogItemListSchema, response), {
 				headers: { "Content-Type": "application/json" },
