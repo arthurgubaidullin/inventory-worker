@@ -1,4 +1,4 @@
-import { type CatalogDatabase } from "@inventory-worker/catalog-database-service";
+import { type CatalogDatabase } from "@inventory-worker/catalog-database-types";
 import { create } from "./create.js";
 
 const db = create();

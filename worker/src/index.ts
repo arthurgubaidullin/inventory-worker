@@ -7,7 +7,7 @@ import {
 	CreateCatalogItem,
 	CreateCatalogItemSchema,
 } from "@inventory-worker/catalog-http-contracts";
-import { getInMemoryCatalogService } from "@inventory-worker/in-memory-catalog-database-service";
+import { getInMemoryCatalogService } from "@inventory-worker/in-memory-catalog-database";
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {

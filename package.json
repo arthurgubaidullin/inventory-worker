@@ -2,7 +2,7 @@
 	"name": "@inventory-worker/source",
 	"type": "module",
 	"workspaces": [
-		"catalog/database/service",
+		"catalog/database/types",
 		"catalog/service/types",
 		"catalog/service/factory",
 		"catalog/database/in-memory",

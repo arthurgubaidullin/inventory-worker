@@ -11,8 +11,8 @@
 	},
 	"dependencies": {
 		"@bufbuild/protobuf": "^2.2.3",
-		"@inventory-worker/catalog-database-service": "*",
-		"@inventory-worker/in-memory-catalog-database-service": "*",
+		"@inventory-worker/catalog-database-types": "*",
+		"@inventory-worker/in-memory-catalog-database": "*",
 		"@inventory-worker/catalog-http-contracts": "*"
 	},
 	"devDependencies": {

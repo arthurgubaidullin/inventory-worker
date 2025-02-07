@@ -1,7 +1,7 @@
 import {
 	type CatalogDatabase,
 	type CatalogItem,
-} from "@inventory-worker/catalog-database-service";
+} from "@inventory-worker/catalog-database-types";
 
 export const create = (): CatalogDatabase => {
 	const db = new Map<string, CatalogItem>();
