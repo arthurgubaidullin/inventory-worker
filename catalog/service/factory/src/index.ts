@@ -10,6 +10,8 @@ export const create = (
 		addCatalogItem: async (item) => {
 			await db.addItem(item);
 
+			logger.info({ service: "catalog", tag: "item_added", item });
+
 			return item;
 		},
 		getCatalogItems: async () => {
