@@ -3,16 +3,21 @@ export interface Item {
 	readonly quantity: number;
 }
 
+export interface ChangeItem {
+	readonly catalogId: string;
+	readonly quantity: number;
+}
+
 export interface ReceivedGoods {
-	readonly receivedGoods: (item: Item) => Promise<void>;
+	readonly receivedGoods: (change: ChangeItem) => Promise<void>;
 }
 
 export interface SoldGoods {
-	readonly soldGoods: (item: Item) => Promise<void>;
+	readonly soldGoods: (change: ChangeItem) => Promise<void>;
 }
 
 export interface GetCurrentStock {
-	readonly getCurrentStock: (catalogId: string) => Promise<Item>;
+	readonly getCurrentStock: (catalogId: string) => Promise<Item | null>;
 }
 
 export type InventoryService = ReceivedGoods & SoldGoods & GetCurrentStock;
