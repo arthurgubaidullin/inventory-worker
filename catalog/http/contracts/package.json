@@ -4,6 +4,7 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
+		"prebuild": "rm -rf *.tsbuildinfo dist src/gen",
 		"build": "npx buf generate && tsc -p tsconfig-build.json"
 	},
 	"files": [
