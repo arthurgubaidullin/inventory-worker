@@ -6,6 +6,7 @@ import {
 	InventoryItemSchema,
 } from "@inventory-worker/inventory-http-contracts";
 import { Hono } from "hono";
+import { JSONResponse } from "./json-response";
 
 const { inventory } = InMemoryServices.get();
 
@@ -22,9 +23,8 @@ app.post("/actions", async (c) => {
 		await inventory.soldGoods(action);
 	}
 
-	return new Response(null, {
+	return JSONResponse(null, {
 		status: 202,
-		headers: { "Content-Type": "application/json" },
 	});
 });
 
@@ -42,9 +42,7 @@ app.get("/:id", async (c) => {
 		create(InventoryItemSchema, inventoryItem),
 	);
 
-	return new Response(json, {
-		headers: { "Content-Type": "application/json" },
-	});
+	return JSONResponse(json);
 });
 
 export default app;

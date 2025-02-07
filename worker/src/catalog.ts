@@ -7,6 +7,7 @@ import {
 } from "@inventory-worker/catalog-http-contracts";
 import * as InMemoryServices from "@inventory-worker/in-memory-services";
 import { Hono } from "hono";
+import { JSONResponse } from "./json-response";
 
 const { catalog } = InMemoryServices.get();
 
@@ -19,9 +20,7 @@ app.get("", async (c) => {
 		items: Array.from(items),
 	});
 
-	return new Response(toJsonString(CatalogItemListSchema, response), {
-		headers: { "Content-Type": "application/json" },
-	});
+	return JSONResponse(toJsonString(CatalogItemListSchema, response));
 });
 
 app.post("", async (c) => {
@@ -29,9 +28,8 @@ app.post("", async (c) => {
 	try {
 		createCatalogItem = fromJson(CreateCatalogItemSchema, await c.req.json());
 	} catch (error) {
-		return new Response(null, {
+		return JSONResponse(null, {
 			status: 400,
-			headers: { "Content-Type": "application/json" },
 		});
 	}
 
@@ -39,9 +37,7 @@ app.post("", async (c) => {
 
 	const item = { id: createCatalogItem.id };
 
-	return new Response(JSON.stringify(item), {
-		headers: { "Content-Type": "application/json" },
-	});
+	return JSONResponse(JSON.stringify(item), { status: 201 });
 });
 
 export default app;
