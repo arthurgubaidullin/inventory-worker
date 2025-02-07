@@ -3,7 +3,11 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"dependencies": {},
+	"dependencies": {
+		"@inventory-worker/services-types": "*",
+		"@inventory-worker/catalog-service-factory": "*",
+		"@inventory-worker/in-memory-catalog-database": "*"
+	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
 		"build": "tsc -p tsconfig-build.json"
