@@ -4,6 +4,12 @@
 		"build": {
 			"dependsOn": ["^build"],
 			"outputs": ["dist/**", "*.tsbuildinfo", "src/gen"]
+		},
+		"test": {
+			"dependsOn": ["build"]
+		},
+		"lint": {
+			"dependsOn": ["build"]
 		}
 	}
 }
