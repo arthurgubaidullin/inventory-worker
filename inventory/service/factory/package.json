@@ -11,7 +11,8 @@
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
-		"build": "tsc -p tsconfig-build.json"
+		"build": "tsc -p tsconfig-build.json",
+		"lint": "eslint ."
 	},
 	"private": true
 }
