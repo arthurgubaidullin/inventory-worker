@@ -13,6 +13,7 @@ const { catalog } = InMemoryServices.get();
 
 const app = new Hono();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.get("", async (c) => {
 	const items = await catalog.getCatalogItems();
 
@@ -27,7 +28,7 @@ app.post("", async (c) => {
 	let createCatalogItem: CreateCatalogItem;
 	try {
 		createCatalogItem = fromJson(CreateCatalogItemSchema, await c.req.json());
-	} catch (error) {
+	} catch {
 		return JSONResponse(null, {
 			status: 400,
 		});
