@@ -1,13 +1,23 @@
 ---
+import { CatalogItemList } from "../components/catalog/item-list";
+import { NewCatalogItemForm } from "../components/catalog/new-item-form";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
 	<div class="container mx-auto">
 		<div class="m-4 grid gap-8">
-			<div>test</div>
 			<div>
-				<button class="btn btn-primary">test</button>
+				<h1 class="text-5xl">Catalog</h1>
+			</div>
+
+			<div class="grid grid-cols-3 gap-8">
+				<div class="col-span-2">
+					<CatalogItemList client:only />
+				</div>
+				<div>
+					<NewCatalogItemForm client:only />
+				</div>
 			</div>
 		</div>
 	</div>
