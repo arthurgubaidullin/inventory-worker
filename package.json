@@ -2,6 +2,7 @@
 	"name": "@inventory-worker/source",
 	"type": "module",
 	"workspaces": [
+		"common/http/response",
 		"catalog/database/types",
 		"catalog/database/in-memory",
 		"catalog/service/types",
