@@ -1,11 +1,5 @@
 ---
-import * as Services from "@inventory-worker/http-services";
-import * as InMemory from "@inventory-worker/in-memory-services";
-import { Hono } from "hono";
+import Service from "../../service";
 
-const app = new Hono();
-
-app.route("/api", Services.get(InMemory.get()));
-
-return await app.fetch(Astro.request);
+return await Service.fetch(Astro.request);
 ---
