@@ -13,10 +13,8 @@
 		"lint": "eslint ."
 	},
 	"dependencies": {
-		"@inventory-worker/catalog-http-service": "*",
-		"@inventory-worker/inventory-http-service": "*",
 		"@inventory-worker/in-memory-services": "*",
-		"hono": "^4.7.0"
+		"@inventory-worker/http-services": "*"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
