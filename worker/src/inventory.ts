@@ -6,7 +6,7 @@ import {
 	InventoryItemSchema,
 } from "@inventory-worker/inventory-http-contracts";
 import { Hono } from "hono";
-import { JSONResponse } from "./json-response";
+import { JSONResponse } from "@inventory-worker/http-response";
 
 const { inventory } = InMemoryServices.get();
 

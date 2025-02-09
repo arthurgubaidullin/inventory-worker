@@ -7,7 +7,7 @@ import {
 } from "@inventory-worker/catalog-http-contracts";
 import * as InMemoryServices from "@inventory-worker/in-memory-services";
 import { Hono } from "hono";
-import { JSONResponse } from "./json-response";
+import { JSONResponse } from "@inventory-worker/http-response";
 
 const { catalog } = InMemoryServices.get();
 
