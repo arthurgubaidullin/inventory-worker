@@ -20,7 +20,8 @@
 		"services/types",
 		"services/in-memory",
 		"http-services",
-		"worker"
+		"worker",
+		"web"
 	],
 	"scripts": {
 		"format:write": "prettier . --write",

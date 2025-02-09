@@ -1,0 +1,21 @@
+{
+	"name": "@inventory-worker/web-app",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev --host",
+		"build": "astro build --host",
+		"preview": "astro build && wrangler pages dev",
+		"astro": "astro",
+		"deploy": "astro build && wrangler pages deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^12.2.1",
+		"astro": "^5.2.5"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250204.0",
+		"wrangler": "^3.107.3"
+	}
+}
