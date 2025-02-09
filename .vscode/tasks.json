@@ -3,8 +3,8 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"command": ["turbo", "build"],
-			"problemMatcher": ["$tsc"],
+			"command": ["turbo", "build", "test", "lint"],
+			"problemMatcher": ["$tsc", "$eslint-stylish"],
 			"label": "turbo: build",
 			"group": {
 				"kind": "build",
