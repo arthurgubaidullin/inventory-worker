@@ -13,13 +13,14 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.2.1",
 		"@astrojs/preact": "^4.0.4",
+		"@inventory-worker/http-services": "*",
+		"@inventory-worker/in-memory-services": "*",
+		"@inventory-worker/catalog-client-factory": "*",
 		"@tailwindcss/vite": "^4.0.5",
 		"astro": "^5.2.5",
-		"preact": "^10.25.4",
-		"tailwindcss": "^4.0.5",
 		"hono": "^4.7.0",
-		"@inventory-worker/http-services": "*",
-		"@inventory-worker/in-memory-services": "*"
+		"preact": "^10.25.4",
+		"tailwindcss": "^4.0.5"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
