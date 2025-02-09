@@ -19,6 +19,7 @@
 		"logger/factory",
 		"services/types",
 		"services/in-memory",
+		"http-services",
 		"worker"
 	],
 	"scripts": {
