@@ -3,7 +3,9 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"dependencies": {},
+	"dependencies": {
+		"@preact/signals": "^2.0.1"
+	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
 		"build": "tsc -p tsconfig-build.json",
