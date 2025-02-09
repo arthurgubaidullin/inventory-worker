@@ -16,7 +16,10 @@
 		"@tailwindcss/vite": "^4.0.5",
 		"astro": "^5.2.5",
 		"preact": "^10.25.4",
-		"tailwindcss": "^4.0.5"
+		"tailwindcss": "^4.0.5",
+		"hono": "^4.7.0",
+		"@inventory-worker/http-services": "*",
+		"@inventory-worker/in-memory-services": "*"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
