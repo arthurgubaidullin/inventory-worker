@@ -6,6 +6,7 @@
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist src/gen",
 		"build": "npx buf generate && tsc -p tsconfig-build.json",
+		"test": "vitest . --run",
 		"lint": "eslint ."
 	},
 	"files": [

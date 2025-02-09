@@ -6,6 +6,7 @@
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
 		"build": "tsc -p tsconfig-build.json",
+		"test": "vitest . --run",
 		"lint": "eslint ."
 	},
 	"private": true
