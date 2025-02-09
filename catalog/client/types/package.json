@@ -1,0 +1,14 @@
+{
+	"name": "@inventory-worker/catalog-client-types",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"dependencies": {},
+	"scripts": {
+		"prebuild": "rm -rf *.tsbuildinfo dist",
+		"build": "tsc -p tsconfig-build.json",
+		"test": "vitest . --run",
+		"lint": "eslint ."
+	},
+	"private": true
+}
