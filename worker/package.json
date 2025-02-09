@@ -13,9 +13,8 @@
 		"lint": "eslint ."
 	},
 	"dependencies": {
-		"@bufbuild/protobuf": "^2.2.3",
-		"@inventory-worker/catalog-http-contracts": "*",
-		"@inventory-worker/inventory-http-contracts": "*",
+		"@inventory-worker/catalog-http-service": "*",
+		"@inventory-worker/inventory-http-service": "*",
 		"@inventory-worker/in-memory-services": "*",
 		"hono": "^4.7.0"
 	},
