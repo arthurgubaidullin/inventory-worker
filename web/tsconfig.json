@@ -4,6 +4,8 @@
 	"exclude": ["dist", "../node_modules"],
 	"compilerOptions": {
 		"types": ["@cloudflare/workers-types/2023-07-01"],
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact"
 	}
 }
