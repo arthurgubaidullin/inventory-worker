@@ -3,7 +3,11 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"dependencies": {},
+	"dependencies": {
+		"@inventory-worker/catalog-client-types": "*",
+		"@preact/signals": "^2.0.1",
+		"@inventory-worker/catalog-http-client": "*"
+	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
 		"build": "tsc -p tsconfig-build.json",
