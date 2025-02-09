@@ -6,5 +6,6 @@
 		{
 			"path": "./tsconfig-test.json"
 		}
-	]
+	],
+	"files": []
 }
