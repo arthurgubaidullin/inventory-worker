@@ -5,3 +5,5 @@
 	root: ":root";
 	themes: corporate --default, dark --prefersdark;
 }
+
+@source "../components/";
