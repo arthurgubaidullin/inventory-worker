@@ -4,7 +4,7 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"dependencies": {
-		"hono": "^4.7.0",
+		"hono": "^4.7.1",
 		"@inventory-worker/catalog-http-service": "*",
 		"@inventory-worker/inventory-http-service": "*",
 		"@inventory-worker/services-types": "*"

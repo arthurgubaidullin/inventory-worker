@@ -5,7 +5,7 @@
 	"types": "dist/index.d.ts",
 	"dependencies": {
 		"@bufbuild/protobuf": "*",
-		"hono": "^4.7.0",
+		"hono": "^4.7.1",
 		"@inventory-worker/catalog-service-types": "*",
 		"@inventory-worker/http-response": "*",
 		"@inventory-worker/catalog-http-contracts": "*"
