@@ -16,7 +16,7 @@
 		"@inventory-worker/catalog-client-factory": "*",
 		"@inventory-worker/http-services": "*",
 		"@inventory-worker/in-memory-services": "*",
-		"@tailwindcss/vite": "^4.0.6",
+		"@tailwindcss/vite": "^4.0.17",
 		"astro": "^5.2.5",
 		"hono": "^4.7.2",
 		"preact": "^10.25.4",
