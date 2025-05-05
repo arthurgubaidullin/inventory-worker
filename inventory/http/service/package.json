@@ -8,7 +8,7 @@
 		"@inventory-worker/http-response": "*",
 		"@inventory-worker/inventory-http-contracts": "*",
 		"@inventory-worker/inventory-service-types": "*",
-		"hono": "^4.7.2"
+		"hono": "^4.7.8"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",

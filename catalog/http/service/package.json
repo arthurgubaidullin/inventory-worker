@@ -8,7 +8,7 @@
 		"@inventory-worker/catalog-http-contracts": "*",
 		"@inventory-worker/catalog-service-types": "*",
 		"@inventory-worker/http-response": "*",
-		"hono": "^4.7.2"
+		"hono": "^4.7.8"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",

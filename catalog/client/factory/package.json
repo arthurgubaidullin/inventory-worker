@@ -5,8 +5,8 @@
 	"types": "dist/index.d.ts",
 	"dependencies": {
 		"@inventory-worker/catalog-client-types": "*",
-		"@preact/signals": "^2.0.1",
-		"@inventory-worker/catalog-http-client": "*"
+		"@inventory-worker/catalog-http-client": "*",
+		"@preact/signals": "^2.0.4"
 	},
 	"scripts": {
 		"prebuild": "rm -rf *.tsbuildinfo dist",
