@@ -11,7 +11,7 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^12.2.1",
+		"@astrojs/cloudflare": "^12.5.2",
 		"@astrojs/preact": "^4.0.4",
 		"@inventory-worker/catalog-client-factory": "*",
 		"@inventory-worker/http-services": "*",
