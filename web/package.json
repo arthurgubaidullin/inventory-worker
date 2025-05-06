@@ -25,6 +25,6 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250505.0",
 		"daisyui": "^5.0.35",
-		"wrangler": "^3.114.8"
+		"wrangler": "^4.14.1"
 	}
 }
