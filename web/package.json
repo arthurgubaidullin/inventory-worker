@@ -23,7 +23,7 @@
 		"tailwindcss": "^4.0.6"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250505.0",
+		"@cloudflare/workers-types": "^4.20250601.0",
 		"daisyui": "^5.0.35",
 		"wrangler": "^4.14.1"
 	}
