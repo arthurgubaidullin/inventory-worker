@@ -17,7 +17,7 @@
 		"@inventory-worker/in-memory-services": "*"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250505.0",
+		"@cloudflare/workers-types": "^4.20250701.0",
 		"typescript": "^5.8.3",
 		"wrangler": "^4.14.1"
 	}
